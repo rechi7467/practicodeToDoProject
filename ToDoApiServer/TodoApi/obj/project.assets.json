@@ -2728,11 +2728,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user1\\Desktop\\‏‏תיקיה חדשה\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\TodoApi.csproj",
+      "projectUniqueName": "C:\\Users\\user1\\Desktop\\practicode34\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\TodoApi.csproj",
       "projectName": "TodoApi",
-      "projectPath": "C:\\Users\\user1\\Desktop\\‏‏תיקיה חדשה\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\TodoApi.csproj",
+      "projectPath": "C:\\Users\\user1\\Desktop\\practicode34\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\TodoApi.csproj",
       "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user1\\Desktop\\‏‏תיקיה חדשה\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\obj\\",
+      "outputPath": "C:\\Users\\user1\\Desktop\\practicode34\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2760,8 +2760,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
-      }
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -2803,12 +2804,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
-            "version": "[9.0.102, 9.0.102]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -2820,37 +2815,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.Extensions.Caching.Memory' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-qj66-m88j-hmgj",
-      "libraryId": "Microsoft.Extensions.Caching.Memory",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Text.Json' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
-      "libraryId": "System.Text.Json",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Text.Json' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-hh2w-p6rv-4g7w",
-      "libraryId": "System.Text.Json",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  }
 }
