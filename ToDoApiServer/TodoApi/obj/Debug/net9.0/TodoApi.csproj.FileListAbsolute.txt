@@ -213,4 +213,3 @@ C:\Users\user1\Desktop\‏‏תיקיה חדשה\practicodeToDoProject\ToDoApiSe
 C:\Users\user1\Desktop\‏‏תיקיה חדשה\practicodeToDoProject\ToDoApiServer\TodoApi\obj\Debug\net9.0\TodoApi.pdb
 C:\Users\user1\Desktop\‏‏תיקיה חדשה\practicodeToDoProject\ToDoApiServer\TodoApi\obj\Debug\net9.0\TodoApi.genruntimeconfig.cache
 C:\Users\user1\Desktop\‏‏תיקיה חדשה\practicodeToDoProject\ToDoApiServer\TodoApi\obj\Debug\net9.0\ref\TodoApi.dll
-C:\Users\user1\Desktop\‏‏תיקיה חדשה\practicodeToDoProject\ToDoApiServer\TodoApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
