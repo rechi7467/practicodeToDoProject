@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user1\\Desktop\\\u200F\u200F\u05EA\u05D9\u05E7\u05D9\u05D4 \u05D7\u05D3\u05E9\u05D4\\practicodeToDoProject\\ToDoApiServer\\",
+  "WorkspaceRootPath": "C:\\Users\\user1\\Desktop\\practicode34\\practicodeToDoProject\\ToDoApiServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9D74EAC-F660-8A73-E2EA-C8EF81470181}|TodoApi\\TodoApi.csproj|c:\\users\\user1\\desktop\\\u200F\u200F\u05EA\u05D9\u05E7\u05D9\u05D4 \u05D7\u05D3\u05E9\u05D4\\practicodetodoproject\\todoapiserver\\todoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9D74EAC-F660-8A73-E2EA-C8EF81470181}|TodoApi\\TodoApi.csproj|c:\\users\\user1\\desktop\\practicode34\\practicodetodoproject\\todoapiserver\\todoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9D74EAC-F660-8A73-E2EA-C8EF81470181}|TodoApi\\TodoApi.csproj|solutionrelative:todoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9D74EAC-F660-8A73-E2EA-C8EF81470181}|TodoApi\\TodoApi.csproj|c:\\users\\user1\\desktop\\\u200F\u200F\u05EA\u05D9\u05E7\u05D9\u05D4 \u05D7\u05D3\u05E9\u05D4\\practicodetodoproject\\todoapiserver\\todoapi\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9D74EAC-F660-8A73-E2EA-C8EF81470181}|TodoApi\\TodoApi.csproj|c:\\users\\user1\\desktop\\practicode34\\practicodetodoproject\\todoapiserver\\todoapi\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9D74EAC-F660-8A73-E2EA-C8EF81470181}|TodoApi\\TodoApi.csproj|solutionrelative:todoapi\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,11 +28,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u200F\u200F\u05EA\u05D9\u05E7\u05D9\u05D4 \u05D7\u05D3\u05E9\u05D4\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\practicode34\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\Program.cs",
               "RelativeDocumentMoniker": "TodoApi\\Program.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u200F\u200F\u05EA\u05D9\u05E7\u05D9\u05D4 \u05D7\u05D3\u05E9\u05D4\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\Program.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\practicode34\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\Program.cs",
               "RelativeToolTip": "TodoApi\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAuwBoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T01:00:44.116Z",
               "EditorCaption": ""
@@ -41,9 +41,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Item.cs",
-              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\\u200F\u200F\u05EA\u05D9\u05E7\u05D9\u05D4 \u05D7\u05D3\u05E9\u05D4\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\Item.cs",
+              "DocumentMoniker": "C:\\Users\\user1\\Desktop\\practicode34\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\Item.cs",
               "RelativeDocumentMoniker": "TodoApi\\Item.cs",
-              "ToolTip": "C:\\Users\\user1\\Desktop\\\u200F\u200F\u05EA\u05D9\u05E7\u05D9\u05D4 \u05D7\u05D3\u05E9\u05D4\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\Item.cs",
+              "ToolTip": "C:\\Users\\user1\\Desktop\\practicode34\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\Item.cs",
               "RelativeToolTip": "TodoApi\\Item.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

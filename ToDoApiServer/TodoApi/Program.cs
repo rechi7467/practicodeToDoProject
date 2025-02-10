@@ -28,7 +28,6 @@ app.MapGet("/task/{id}", async (ToDoDbContext db, int id) => {
     var task = await db.Items.FindAsync(id);
     return task != null ? Results.Ok(task) : Results.NotFound();
 });
-
 app.MapGet("/task", async (ToDoDbContext db) =>{
 var a= await db.Items.ToListAsync();
 return Results.Ok(a);
