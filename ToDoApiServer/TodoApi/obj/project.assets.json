@@ -2728,11 +2728,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user1\\Desktop\\homeWork\\פרקטיקוד\\practicode-3\\ToDoApi\\TodoApi\\TodoApi.csproj",
+      "projectUniqueName": "C:\\Users\\user1\\Desktop\\‏‏תיקיה חדשה\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\TodoApi.csproj",
       "projectName": "TodoApi",
-      "projectPath": "C:\\Users\\user1\\Desktop\\homeWork\\פרקטיקוד\\practicode-3\\ToDoApi\\TodoApi\\TodoApi.csproj",
+      "projectPath": "C:\\Users\\user1\\Desktop\\‏‏תיקיה חדשה\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\TodoApi.csproj",
       "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user1\\Desktop\\homeWork\\פרקטיקוד\\practicode-3\\ToDoApi\\TodoApi\\obj\\",
+      "outputPath": "C:\\Users\\user1\\Desktop\\‏‏תיקיה חדשה\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
