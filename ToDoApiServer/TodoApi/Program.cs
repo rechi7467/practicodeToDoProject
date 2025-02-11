@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TodoApi;
+using ToDoDbContext = TodoApi.ToDoDbContext;
+
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("ToDoDB");
@@ -30,38 +32,37 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-
-app.MapGet("/tasks", async (ToDoDbContext context) =>
-{
-    var item= await context.Items.ToListAsync();
-    return Results.Ok(item);
+app.MapGet("/",()=>"serever-items is runing!");
+app.MapGet("/items", async (ToDoDbContext db) =>{
+var a= await db.Items.ToListAsync();
+return Results.Ok(a);
 });
 
-app.MapPost("/tasks", async (ToDoDbContext context, Item item) =>
-{
-    await context.Items.AddAsync(item);
-    await context.SaveChangesAsync();
-    return Results.Created($"/tasks/{item.Id}", item);
+app.MapPost("/items", async ( ToDoDbContext db,Item newTask) => {
+    await db.Items.AddAsync(newTask);
+    await db.SaveChangesAsync();
+    return Results.Created($"/item/{newTask.Id}", newTask);
 });
 
-app.MapPut("/tasks/{id}", async (ToDoDbContext context, int id, Item updatedItem) =>
+app.MapPut("/items/{id}", async (ToDoDbContext db ,int id,bool inputTask) =>
 {
-    var item = await context.Items.FindAsync(id);
+    var task = await db.Items.FindAsync(id);
 
-    if (item == null) return Results.NotFound();
-    item.IsComplete = updatedItem.IsComplete;
-    await context.SaveChangesAsync();
-    return Results.NoContent();
+    if (task is null) return Results.NotFound();
+    task.IsComplete = !task.IsComplete;
+    await db.SaveChangesAsync();
+    return Results.Ok(task);
 });
-
-app.MapDelete("/tasks/{id}", async (ToDoDbContext context, int id) =>
+app.MapDelete("/items/{id}", async (ToDoDbContext db, int id) =>
 {
-    var item = await context.Items.FindAsync(id);
-    if (item == null) return Results.NotFound();
+    var task = await db.Items.FindAsync(id);
 
-    context.Items.Remove(item);
-    await context.SaveChangesAsync();
-    return Results.NoContent();
+    if (task is null) return Results.NotFound();
+
+    db.Items.Remove(task);
+    await db.SaveChangesAsync();
+
+    return Results.Ok();
 });
 
 app.Run();
