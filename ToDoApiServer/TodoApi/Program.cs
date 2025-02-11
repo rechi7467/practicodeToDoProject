@@ -1,13 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using TodoApi;
-using ToDoDbContext = TodoApi.ToDoDbContext;
-
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("ToDoDB");
 
 builder.Services.AddDbContext<ToDoDbContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.Parse("8.0.41-mysql")));
+    options.UseMySql(connectionString, ServerVersion.Parse("8.0.32-mysql")));
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
@@ -32,37 +30,38 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-app.MapGet("/",()=>"serever-items is runing!");
-app.MapGet("/items", async (ToDoDbContext db) =>{
-var a= await db.Items.ToListAsync();
-return Results.Ok(a);
-});
 
-app.MapPost("/items", async ( ToDoDbContext db,Item newTask) => {
-    await db.Items.AddAsync(newTask);
-    await db.SaveChangesAsync();
-    return Results.Created($"/item/{newTask.Id}", newTask);
-});
-
-app.MapPut("/items/{id}", async (ToDoDbContext db ,int id,bool inputTask) =>
+app.MapGet("/tasks", async (ToDoDbContext context) =>
 {
-    var task = await db.Items.FindAsync(id);
-
-    if (task is null) return Results.NotFound();
-    task.IsComplete = !task.IsComplete;
-    await db.SaveChangesAsync();
-    return Results.Ok(task);
+    var item= await context.Items.ToListAsync();
+    return Results.Ok(item);
 });
-app.MapDelete("/items/{id}", async (ToDoDbContext db, int id) =>
+
+app.MapPost("/tasks", async (ToDoDbContext context, Item item) =>
 {
-    var task = await db.Items.FindAsync(id);
+    await context.Items.AddAsync(item);
+    await context.SaveChangesAsync();
+    return Results.Created($"/tasks/{item.Id}", item);
+});
 
-    if (task is null) return Results.NotFound();
+app.MapPut("/tasks/{id}", async (ToDoDbContext context, int id, Item updatedItem) =>
+{
+    var item = await context.Items.FindAsync(id);
 
-    db.Items.Remove(task);
-    await db.SaveChangesAsync();
+    if (item == null) return Results.NotFound();
+    item.IsComplete = updatedItem.IsComplete;
+    await context.SaveChangesAsync();
+    return Results.NoContent();
+});
 
-    return Results.Ok();
+app.MapDelete("/tasks/{id}", async (ToDoDbContext context, int id) =>
+{
+    var item = await context.Items.FindAsync(id);
+    if (item == null) return Results.NotFound();
+
+    context.Items.Remove(item);
+    await context.SaveChangesAsync();
+    return Results.NoContent();
 });
 
 app.Run();

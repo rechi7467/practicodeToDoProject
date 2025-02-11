@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8l5fmtlP+pE=",
+  "dgSpecHash": "ssoLIoP1fhM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Desktop\\‏‏תיקיה חדשה\\TodoApi\\TodoApi.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Desktop\\practicode34\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\TodoApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user1\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
