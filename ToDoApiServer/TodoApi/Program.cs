@@ -1,67 +1,67 @@
 using Microsoft.EntityFrameworkCore;
 using TodoApi;
-using ToDoDbContext = TodoApi.ToDoDbContext;
-using Item = TodoApi.Item;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<ToDoDbContext>();
+var connectionString = builder.Configuration.GetConnectionString("ToDoDB");
 
+builder.Services.AddDbContext<ToDoDbContext>(options =>
+    options.UseMySql(connectionString, ServerVersion.Parse("8.0.41-mysql")));
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
-        builder => builder.AllowAnyOrigin()
-                          .AllowAnyMethod()
-                          .AllowAnyHeader());
+        builder => builder.AllowAnyOrigin() // Allow any origin
+                          .AllowAnyHeader()
+                          .AllowAnyMethod());
 });
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+app.UseCors("AllowAllOrigins"); 
 
+if (app.Environment.IsDevelopment())
+{
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Todo API V1");
+        c.RoutePrefix = string.Empty; // Set Swagger UI at the app's root
+    });
+}
 
 
-app.UseCors("AllowAllOrigins");
-
-app.MapGet("/task/{id}", async (ToDoDbContext db, int id) => {
-    var task = await db.Items.FindAsync(id);
-    return task != null ? Results.Ok(task) : Results.NotFound();
-});
-app.MapGet("/task", async (ToDoDbContext db) =>{
-var a= await db.Items.ToListAsync();
-return Results.Ok(a);
-});
-
-app.MapPost("/task", async ( ToDoDbContext db, Item newItem) => {
-    await db.Items.AddAsync(newItem);
-    await db.SaveChangesAsync();
-    return Results.Created($"/task/{newItem.Id}", newItem);
-});
-
-app.MapPut("/task/{id}", async (ToDoDbContext db ,int id,bool inputTask) =>
+app.MapGet("/tasks", async (ToDoDbContext context) =>
 {
-    var task = await db.Items.FindAsync(id);
-
-    if (task is null) return Results.NotFound();
-    task.IsComplete = !task.IsComplete;
-    await db.SaveChangesAsync();
-    return Results.Ok(task);
+    var item= await context.Items.ToListAsync();
+    return Results.Ok(item);
 });
-app.MapDelete("/task/{id}", async (ToDoDbContext db, int id) =>
+
+app.MapPost("/tasks", async (ToDoDbContext context, Item item) =>
 {
-    var task = await db.Items.FindAsync(id);
-
-    if (task is null) return Results.NotFound();
-
-    db.Items.Remove(task);
-    await db.SaveChangesAsync();
-
-    return Results.Ok();
+    await context.Items.AddAsync(item);
+    await context.SaveChangesAsync();
+    return Results.Created($"/tasks/{item.Id}", item);
 });
 
-app.MapGet("/",()=>"ToDoApiService is running!");
+app.MapPut("/tasks/{id}", async (ToDoDbContext context, int id, Item updatedItem) =>
+{
+    var item = await context.Items.FindAsync(id);
+
+    if (item == null) return Results.NotFound();
+    item.IsComplete = updatedItem.IsComplete;
+    await context.SaveChangesAsync();
+    return Results.NoContent();
+});
+
+app.MapDelete("/tasks/{id}", async (ToDoDbContext context, int id) =>
+{
+    var item = await context.Items.FindAsync(id);
+    if (item == null) return Results.NotFound();
+
+    context.Items.Remove(item);
+    await context.SaveChangesAsync();
+    return Results.NoContent();
+});
 
 app.Run();
-
-

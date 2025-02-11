@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user1\\Desktop\\practicode34\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\TodoApi.csproj": {}
+    "C:\\Users\\user1\\Desktop\\‏‏תיקיה חדשה\\TodoApi\\TodoApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user1\\Desktop\\practicode34\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\TodoApi.csproj": {
+    "C:\\Users\\user1\\Desktop\\‏‏תיקיה חדשה\\TodoApi\\TodoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user1\\Desktop\\practicode34\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\TodoApi.csproj",
+        "projectUniqueName": "C:\\Users\\user1\\Desktop\\‏‏תיקיה חדשה\\TodoApi\\TodoApi.csproj",
         "projectName": "TodoApi",
-        "projectPath": "C:\\Users\\user1\\Desktop\\practicode34\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\TodoApi.csproj",
+        "projectPath": "C:\\Users\\user1\\Desktop\\‏‏תיקיה חדשה\\TodoApi\\TodoApi.csproj",
         "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user1\\Desktop\\practicode34\\practicodeToDoProject\\ToDoApiServer\\TodoApi\\obj\\",
+        "outputPath": "C:\\Users\\user1\\Desktop\\‏‏תיקיה חדשה\\TodoApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,36 +39,33 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        }
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "Docker.Registry.DotNet": {
-              "target": "Package",
-              "version": "[2.0.0, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[9.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[9.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[9.0.1, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[9.0.0-preview.2.efcore.9.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -86,12 +83,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
-              "version": "[9.0.102, 9.0.102]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
